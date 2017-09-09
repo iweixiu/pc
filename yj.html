@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>财富提款机</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>《财富解码器》实战训练，招募中！</h1>
+<h2><font color="red"> 网络盈利，如同沏茶一样简单….只要你悟透赚钱背后的密码。</font></h2>
+<p>有些人，苦苦寻找项目，结果却颗粒无收；有些人，死磕着寻找客户，一天下来却没有成交；有些人，想提升自己的利润，却始终找不到突破点；有些人，终日迷茫，最终没有搞清网络盈利之道……当别人通过网络日入数千甚至过万的时候，改变，刻不容缓！</p>
+<p>历经5年的网络实验，《财富解码器》 实战训练，横空出世。毫不避讳的说，90%的营销类课程都是假把式，因为无法落地！你学习的时候，满腔热血，回到现实却无从下手！财富解码器，将涉及：项目、推广、成交、团队运营等诸多细节，注重：落地才是王道。</p>
+<p>课程主讲：演金，互联网创业者，一品创客公司CEO，演金部落创始人，多家网络公司顾问，“百万计划”、“钱商思维”、“文案提款机”等概念提出者。0成本徒手通过网络创造了数百万利润，项目及训练风靡互联网，受到众多个人创业者追捧。为了让更多人彻悟财富背后的密码，第三期主题训练，《财富解码器》呼之欲出。</p>
+<p>本期训练核心内容：</p>
+<h2>（一）解码财富法则</h2>
+<p>当你处于富足状态，你将吸引更多富足。相反，当你处于不够、索取状态，你将吸引更多匮乏。前几年，我的头脑里全部是出单，总是感觉不够，1天赚了1万，想要2万，有时候，一天盈利5万，也深感匮乏，总是不够！直到悟透财富法则之后，生命才变得轻松自如。一个人，只有内在富足，才能表现为外在的丰富。如何打开内在富足的大门？如何显现外在的财富？本次训练，首次揭秘！</p>
+<h2>（二）0成本项目打造</h2>
+<p>一切资源、项目都已经存在，关键是你能否发现和使用。过去的几年中，我亲自操刀了20多个互联网项目，利润数百万，并且指导了100多个学员项目，在这个过程中，深刻体会到，项目处处都有。前段时间的《战狼2》项链项目，最初1周，就实现3万利润，而相关资源都是现成的。本次训练，将首次系统分享0成本项目思维，思维悟透，随时可以生发盈利项目，你会惊奇的发现： 原来，赚钱如此简单。</p>
+<h2>（三） 超级推广技术</h2>
+<p>无推广、不成交。这段时间，我们又升级了全新的推广技术，比如：如何在1天获取300个有效客户，如何借力日吸500粉丝，如何通过分钱策略引爆流量、如何通过裂变倍增客户等。本次训练，将分享10种以上的推广技术以及成交策略，不管你销售什么，都可以轻松获取精准客户，海量成交。这些方法，也是5年来，大浪淘沙的精华总结，势必给你带去震撼效果。</p>
+<h2>（四） 轻型团队运营</h2>
+<p>1个人，也可以打造千人团队，重要的是，不需要发工资，更没有任何成本。传统的员工模式已渐渐淘汰，如何打造轻型的网络团队已成为新课题。以前，我们团队也是员工模式，一个月数万成本，改组后，成本为0，利润却实现了倍增。现在，我们这套模式已经成熟，不管你是个人创业，还是公司运营，都可以借助这套模式，让成千上万人免费成为你的员工，互惠共利。这套团队管理模式，曾售价3000元，本次首次公开分享。</p>
+<h2>（五） 财富自动显化</h2>
+<p>每个人都与源头能量连接着，只有当你找到自己喜好的、绽放能量的通道，财富才会自动追随你。通过做一件利人利己、利益众生的事情，让能量流淌起来，资源、机会、人脉等一切，将自动被你吸引，显现在你的生命中。你所做的事，所选择的绽放通道，就是你的生命轨迹。当你在自己的轨迹上，创造、贡献、玩耍、乐在其中的时候，财富等一切都将自动发生。如何找到自己的轨迹？如何活出独有的色彩？本主题，全网首次解读。</p>
+<p>当然，这些内容只是本次训练的冰山一角，这些文字，无法穷尽，干货将在训练中逐一揭晓。</p>
+<p>新增答疑环节：</p>
+<p>为了确保效果，我们拿出一天时间，专门解决成员问题。不管是项目、推广、还是成交、转化，亦或是团队运营中的问题，都可以直接提问。假传万卷书，真传一句话，也许一次答疑，可以直接破解你的瓶颈，倍增你的利润。机会绝无仅有。</p>
+<p>本次训练价格：</p>
+<p>本期训练，因为涉及最新的思维及推广技术，初期定价1000元！众所周知，演金部落已是运营5年的网络实战团队，线上会员2千元，目前已超过1300余人，老板代理本月1.48万元，报名的队员依旧络绎不绝，因为用心，所以更多人选择。</p>
+<p>为了让更多网络创业者，能够低成本掌握财富法则，也为了扩大演金部落品牌的影响力，团队再次降低门槛，仅需99元！当然，以后这样的机会将越来越少。本主题，第二期将恢复1000元原价。</p>
+<p>99元，可以全方位掌握网络盈利精髓；可以吸收价值百万的思维精华；可以让自己处于喜悦富足的状态！也许一个理念的改变，一个方法的改进，可以直接改变你今后的生活。 </p>
+<h2>另外，还有价值超1000元的三份礼物！</h2>
+<p>礼物一：《演金创富训练营》最新版，全套录像一份，共6小时，实际价格680元，内容涵盖：项目挖掘、网络推广、文案撰写、成交策略，团队管理等实战内容，受到众多网友热捧。</p>
+<p>礼物二：《软文推广秘籍》录像课，由演金部落一线推广人员录制，涵盖软文推广细节。掌握软文推广，可以实现自动引流，可长期操作，比较稳定。本录像，价值1000元，首次公开。</p>
+<p>礼物三：暂时保密，将在训练的最后一天公布，价值无法衡量。也许你已意识到，仅仅这三份礼物，价值已经是价格的10倍！这次选择，绝对物超所值。</p>
+<h2></h2>
+<p>不可思议的是，还有“回本计划”！ ##</p>
+<p>所有报名的队员，都有销售权，开课前，每推荐1位队员参训，均有50%的利润回报。推荐2位队员，即可赚回学费。有可能，简单推广，即可收获数千利润！</p>
+<p>补充说明：</p>
+<p>训练价格：99元  本期限300位！</p>
+<p>上课地点：微信群，语音分享，连续4天，每天1到2小时。</p>
+<p>上课时间：9月4日到8日（暂定）。分享完毕后，立刻出录音，可随时学习，不受时间限制。</p>
+<p>风险承诺：如果本次训练，没有给你带去震撼性启发，可直接联络我，退还100元，你没有任何风险。</p>
+<p>报名方式：</p>
+<p>联络您的推荐人，付费成功后，他会邀请你进入内部学习群。</p>
+<p>往期成员反馈：</p>
+<img src="./yj_files/yj1.png">
+<img src="./yj_files/yj2.png">
+<img src="./yj_files/yj3.png">
+<img src="./yj_files/yj4.png">
+<img src="./yj_files/yj5.png">
+<img src="./yj_files/yj6.png">
+<img src="./yj_files/yj7.png">
+<img src="./yj_files/yj8.png">
+<img src="./yj_files/yj9.png">
+<img src="./yj_files/yj10.png">
+<p>更多反馈，介于篇幅原因，不再贴出。新一期训练，将增加全新内容，更多策略全网首发！</p>
+<p>现在，立即报名，联络推荐人，马上办理，进入内部学习群！锁定仅有的300个名额！</p>
+<p><img src="./yj_files/yj11.png">
+<img src="./yj_files/yj12.jpg"></p>
+<h1><font color="red">支持信用卡 花呗</font></h1>
+<h2>付款后联系 微信<font color="blue"> iluohao </font>办理</h2>
+
+
+
+</body></html>
